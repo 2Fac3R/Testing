@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTML Basics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basico.css"> </head>
+
+<body>
+    <!-- HTML5 does not require empty elements to be closed. But if you want stricter validation, or if you need to make your document readable by XML parsers, you must close all HTML elements properly.-->
+    <button onclick="mostrarResultado()">Click me!</button>
+    <div id="resultado"></div>
+    <h1>H1 tag</h1>
+    <h2>H2 tag</h2>
+    <h3>H3 tag</h3>
+    <h4>H4 tag</h4>
+    <h5>H5 tag</h5>
+    <h6>H6 tag</h6>
+    <p>Paragraph tag</p>
+    <pre> Preformated 				text </pre> <a href="#">Link</a> <a href="#">Link1</a> <img src="../../img/Charizard.png" alt="Text to be used when an image cannot be displayed." width="200" height="300"></img>
+    <br />
+    <hr />
+    <!--Lists-->
+    <ul>
+        <!-- Unordered elements-->
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <ol>
+        <!-- Ordered elements -->
+        <li>One</li>
+        <li>Two</li>
+    </ol>
+    <br />
+    <blockquote>Sólo el conocimiento te hace libre</blockquote>
+    <!-- Tables -->
+    <table>
+        <caption>Table example</caption>
+        <!-- Table "title"-->
+        <tr>
+            <!-- Table Row -->
+            <th>Firstname</th>
+            <!-- Table Headers -->
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <!-- Table Data -->
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>76</td>
+        </tr>
+    </table>
+    <br />
+    <h2>Types of elements</h2> <span>Inline-level element</span> <span id="inline-example">Inline-level element</span>
+    <div id="inblock-example">Block-level element</div>
+    <div>Block-level element</div>
+    <iframe src="https://www.w3schools.com/html/html_iframe.asp" height="200" width="200"></iframe>
+    <form name="formulario-1" action="#" method="post">
+        <input type="text" name="" maxlength="10">
+        <input type="radio" name="" required>
+        <input type="color" name="">
+        <input type="date" name="">
+        <input type="email" name="">
+        <input type="number" name="" min="0" max="10">
+        <input type="range" name="" min="0" max="10">
+        <input type="search" name="" disabled>
+        <input type="tel" name="">
+        <input type="password" name="">
+        <input type="url" name="">
+        <input type="submit" name=""> </form>
+    <br />
+    <form name="formulario-2" action="#" method="get">
+        <input type="text" name="">
+        <input type="radio" name="">
+        <input type="submit" name="">
+        <input type="reset"> </form>
+    <form action="">
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+                <option value="Firefox">
+                    <option value="Chrome">
+                        <option value="Opera">
+                            <option value="Safari">
+        </datalist>
+    </form>
+    <select name="opciones">
+        <option name="opc1" value="Opcion 1">Opcion 1</option>
+        <option name="opc2" value="Opcion 2">Opcion 2</option>
+        <option name="opc3" value="Opcion 3">Opcion 3</option>
+    </select>
+    <br />
+    <select name="opciones-2" size="2" multiple>
+        <option name="opc1" value="Opcion 1">Opcion 1</option>
+        <option name="opc2" value="Opcion 2" selected>Opcion 2</option>
+        <option name="opc3" value="Opcion 3">Opcion 3</option>
+    </select>
+    <br />
+    <textarea name="mensaje" rows="10" cols="30">Mensaje de prueba</textarea>
+    <br />
+    <img src="" width="" height="" alt="">Image</img>
+    <script src="basico.js"></script>
+</body>
+
+</html>
