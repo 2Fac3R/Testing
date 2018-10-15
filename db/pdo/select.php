@@ -1,0 +1,1 @@
+// Go to file -> prepare_statements2.php // ----------------------------- // | $sth->execute(); | // | $data = $sth->fetchAll(); | // -----------------------------
