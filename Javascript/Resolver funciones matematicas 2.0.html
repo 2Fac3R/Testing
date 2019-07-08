@@ -1,19 +1,19 @@
 <script>
-/*
-    Funciones Matemáticas [JS] By 2Fac3R
-*/
-    
-if(valor = parseInt(prompt("Ingresa el valor de X"))){ // obtenemos el valor y lo hacemos entero
-    document.write('<table border="1"><th><b>X</b></th> <th><b>Y</b></th>');
-    for(i=0; i < 6; i++){    // Nos mostrara 6 resultados
-        fun = valor * 13;  // Aqui la función matemática
-        document.write("<tr><td>" + valor.toFixed(1) + "</td><td>" + fun.toFixed(1) + "</td></tr>");
-        valor = valor + 0.1; // le sumamos decimales
+    /*
+        Funciones Matemáticas [JS] By 2Fac3R
+    */
+
+    if (valor = parseInt(prompt("Ingresa el valor de X"))) { // obtenemos el valor y lo hacemos entero
+        document.write('<table border="1"><th><b>X</b></th> <th><b>Y</b></th>');
+        for (i = 0; i < 6; i++) { // Nos mostrara 6 resultados
+            fun = valor * 13; // Aqui la función matemática
+            document.write("<tr><td>" + valor.toFixed(1) + "</td><td>" + fun.toFixed(1) + "</td></tr>");
+            valor = valor + 0.1; // le sumamos decimales
+        }
+        document.write("</table>");
+    } else { // Si el valor no es numerico
+        alert("Ingrese un valor numerico");
+        document.write("Ningun valor fue ingresado, <a href='funcmate2.html'>Regresar!</a>");
     }
-    document.write("</table>");
-} else { // Si el valor no es numerico
-    alert("Ingrese un valor numerico");
-    document.write("Ningun valor fue ingresado, <a href='funcmate2.html'>Regresar!</a>");
-}
-    
+
 </script>

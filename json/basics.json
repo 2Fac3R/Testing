@@ -6,9 +6,9 @@
 } // Numbers
 { // Objects
     "employee": {
-        "name": "John"
-        , "age": 30
-        , "city": "New York"
+        "name": "John",
+        "age": 30,
+        "city": "New York"
     }
 } { //arrays
     "employees": ["John", "Anna", "Peter"]
@@ -20,9 +20,9 @@
 } // null
 // Nested JSON Objects
 myObj = {
-    "name": "John"
-    , "age": 30
-    , "cars": [
+    "name": "John",
+    "age": 30,
+    "cars": [
         "car1": "Ford"
         , "car2": "BMW"
         , "car3": "Fiat"

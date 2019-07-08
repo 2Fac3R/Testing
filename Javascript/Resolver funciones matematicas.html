@@ -5,55 +5,56 @@
 <script>
     function fun() {
         var x = (prompt("Valor inicial de X:"));
-        if(isNaN(x)||x>10||x<-20) { //Si X no es un numero o es mayor a 10 y -20
+        if (isNaN(x) || x > 10 || x < -20) { //Si X no es un numero o es mayor a 10 y -20
             alert("X debe ser un numero entre -20 y 10")
             fun();
-            } else {
-        if( x.charAt(0) == "-" ) { //Si x es negativo
-            x = x.substring(1,x.length); // quitarle el signo "-"
-            if(x.indexOf(".") == true) { // si son decimales
-                x = "-"+x;
-                decimales(x);
+        } else {
+            if (x.charAt(0) == "-") { //Si x es negativo
+                x = x.substring(1, x.length); // quitarle el signo "-"
+                if (x.indexOf(".") == true) { // si son decimales
+                    x = "-" + x;
+                    decimales(x);
                 } else { //si son enteros
-                x = "-"+x;
-                enteros(x);
+                    x = "-" + x;
+                    enteros(x);
                 }
             } else { //Si x es positivo
-            if(x.indexOf(".") == true) { // y con decimales
-                decimales(x);
+                if (x.indexOf(".") == true) { // y con decimales
+                    decimales(x);
                 } else { // si x es entero
-                enteros(x);
+                    enteros(x);
                 }
             }
         }
     }
- 
-        function decimales(x) {
+
+    function decimales(x) {
         document.write("<table border='1'><th>X</th><th>Y</th>");
-            x = parseFloat(x); //pasamos x a numeros con decimales
-            limit = x + parseFloat(1.0); //agregamos el valor final de x
-                while(x<limit) {
-                resul = ((Math.pow(x,2))) + (5 * x) - 2;
-                document.write("<tr><td>"+x.toFixed(1)+"</td><td>"+resul.toFixed(1)+"</td></tr>");
-                x += parseFloat(0.1);
-                if (x>limit) {
-                    break;
-                    }
-                }
-            document.write("</table>");
+        x = parseFloat(x); //pasamos x a numeros con decimales
+        limit = x + parseFloat(1.0); //agregamos el valor final de x
+        while (x < limit) {
+            resul = ((Math.pow(x, 2))) + (5 * x) - 2;
+            document.write("<tr><td>" + x.toFixed(1) + "</td><td>" + resul.toFixed(1) + "</td></tr>");
+            x += parseFloat(0.1);
+            if (x > limit) {
+                break;
             }
- 
-        function enteros(x) {
+        }
+        document.write("</table>");
+    }
+
+    function enteros(x) {
         document.write("<table border='1'><th>X</th><th>Y</th>");
         x = parseInt(x); //pasamos x a enteros
         limit = x + parseInt(10); //agregamos el valor final de x
-        for(x;x<=limit;x++) {
-            resul = ((Math.pow(x,2))) + (5 * x) - 2;
-            document.write("<tr><td>"+x+"</td><td>"+resul+"</td></tr>");
-            if (x>limit) {
+        for (x; x <= limit; x++) {
+            resul = ((Math.pow(x, 2))) + (5 * x) - 2;
+            document.write("<tr><td>" + x + "</td><td>" + resul + "</td></tr>");
+            if (x > limit) {
                 break;
-                }
             }
+        }
         document.write("</table>");
-            }
+    }
+
 </script>

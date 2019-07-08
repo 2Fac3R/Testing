@@ -1,5 +1,5 @@
-var i = 0
-    , len;
+var i = 0,
+    len;
 displayCD(i);
 
 function displayCD(i) {
