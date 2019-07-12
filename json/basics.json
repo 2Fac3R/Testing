@@ -11,7 +11,11 @@
         "city": "New York"
     }
 } { //arrays
-    "employees": ["John", "Anna", "Peter"]
+    "employees": [
+        "John",
+        "Anna",
+        "Peter"
+    ]
 } {
     "sale": true
 } // boolean
@@ -23,8 +27,8 @@ myObj = {
     "name": "John",
     "age": 30,
     "cars": [
-        "car1": "Ford"
-        , "car2": "BMW"
-        , "car3": "Fiat"
+        "car1": "Ford",
+        "car2": "BMW",
+        "car3": "Fiat"
     ]
 }
