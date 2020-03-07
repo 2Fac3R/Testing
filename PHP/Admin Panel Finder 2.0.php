@@ -1,49 +1,51 @@
 <title> Admin Panel Finder v1.0 By 2Fac3R</title>
 <style>
-    body,
-    html {
-        background-color: black;
-        text-align: center;
-        color: green;
-    }
+  body,
+  html {
+    background-color: black;
+    text-align: center;
+    color: green;
+  }
 
-    #found {
-        font-style: italic;
-        font-size: large;
-    }
+  #found {
+    font-style: italic;
+    font-size: large;
+  }
 
-    a {
-        color: red;
-    }
+  a {
+    color: red;
+  }
 
 </style>
 <pre>
- 
-  ___      _           _        ______                _  ______ _           _            ______         _____ ______         _ 
- / _ \    | |         (_)       | ___ \              | | |  ___(_)         | |           | ___ \       / __  \|  ___|       | |
+
+___      _           _        ______                _  ______ _           _            ______         _____ ______         _ 
+/ _ \    | |         (_)       | ___ \              | | |  ___(_)         | |           | ___ \       / __  \|  ___|       | |
 / /_\ \ __| |_ __ ___  _ _ __   | |_/ /_ _ _ __   ___| | | |_   _ _ __   __| | ___ _ __  | |_/ /_   _  `' / /'| |_ __ _  ___| |
 |  _  |/ _` | '_ ` _ \| | '_ \  |  __/ _` | '_ \ / _ \ | |  _| | | '_ \ / _` |/ _ \ '__| | ___ \ | | |   / /  |  _/ _` |/ __| |
 | | | | (_| | | | | | | | | | | | | | (_| | | | |  __/ | | |   | | | | | (_| |  __/ |    | |_/ / |_| | ./ /___| || (_| | (__|_|
 \_| |_/\__,_|_| |_| |_|_|_| |_| \_|  \__,_|_| |_|\___|_| \_|   |_|_| |_|\__,_|\___|_|    \____/ \__, | \_____/\_| \__,_|\___(_)
-                                                                                                 __/ |                         
-                                                                                                |___/                          
- 
-</pre> <b>Uso:</b>
+                                                                                                __/ |                         
+                                                                                              |___/                          
+
+</pre> 
+<b>Uso:</b>
 <br>
 <br> Es necesario anteponer el "http://" para que funcione correctamente.
 <br>
 <br>
 <br>
 <form action="" method="POST">
-    <input type="text" name="page" size="50" value="http://">
-    <input type="submit" name="submit" value="Buscar!"> </form>
+  <input type="text" name="page" size="50" value="http://">
+  <input type="submit" name="submit" value="Buscar!"> 
+</form>
 <br>
 <?php
 # ---------------------------------
 # Admin Panel Finder By 2Fac3R
 #       v1.0 - 2013
 # ---------------------------------
- 
+
 set_time_limit(0);
 error_reporting(0);
 $panel = array("/admin1.php", "/admin1.html", "/admin2.php", "/admin2.html", "/yonetim.php", "/yonetim.html", 
@@ -107,26 +109,26 @@ $panel = array("/admin1.php", "/admin1.html", "/admin2.php", "/admin2.html", "/y
 "/phpMyAdmin-3.3.6/","/phpMyAdmin-3.3.5.1/","/phpMyAdmin-2.11.10.1/","/sqlmanager/","/mysqlmanager/","/p/m/a/",
 "/PMA2005/","/pma2005/","/phpmanager/","/php-myadmin/","/phpmy-admin/","/webadmin/","/sqlweb/","/websql/",
 "/webdb/","/mysqladmin/","/mysql-admin/");
- 
- 
+
+
 $url = htmlentities($_POST['page'], ENT_QUOTES);
- 
-if(!empty($url)){
-        
-        foreach($panel as $p){
-                $head = get_headers($url.$p);
-                        if( $head[0] == 'HTTP/1.1 200 OK' ){
-                                echo "<div id='found'> <b>Found:</b>: $url$p </div>";
-                }
-        }
+
+if( !empty($url) ) {
+  foreach( $panel as $p ) {
+    $head = get_headers($url.$p);
+      if( $head[0] == 'HTTP/1.1 200 OK' ){
+              echo "<div id='found'> <b>Found:</b>: $url$p </div>";
+    }
+  }
 }
- 
+
 ?>
-    <br>
-    <!-- 
-    Admin Panel Finder By 2Fac3R
-            v1.0 - 2013                     
---><b>Gr33tz to:</b>
-    <br> xt3mp, arcangel_nigth, ANTRAX, 11Sep, Kr34t0r, GAMARRA, SkippyCreammy, v1c0_h4ck, w4rning, etc, etc .
-    <br>
-    <br> <a href="http://www.underc0de.org">Underc0de</a>
+<br>
+<!-- 
+  Admin Panel Finder By 2Fac3R
+  v1.0 - 2013                     
+-->
+<b>Gr33tz to:</b>
+<br> xt3mp, arcangel_nigth, ANTRAX, 11Sep, Kr34t0r, GAMARRA, SkippyCreammy, v1c0_h4ck, w4rning, etc, etc .
+<br>
+<br> <a href="http://www.underc0de.org">Underc0de</a>
