@@ -23,9 +23,9 @@ if __name__ == '__main__':
     comienzo = time.time()
     factorial(n)
     final = time.time()
-    print(final - comienzo)
+    print("Non Recursive: ", final - comienzo)
 
     comienzo = time.time()
     factorial_r(n)
     final = time.time()
-    print(final - comienzo)
+    print("Recursive: ", final - comienzo)
