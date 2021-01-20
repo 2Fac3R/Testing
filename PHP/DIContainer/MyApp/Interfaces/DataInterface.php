@@ -2,7 +2,8 @@
 
 namespace MyApp\Interfaces;
 
-interface DataInterface {
+interface DataInterface 
+{
     public function read();
     public function write();
 }
