@@ -1,19 +1,24 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
 
-try 
+Class Connection
 {
-    $conn = new PDO("mysql:host=$servername;dbname=test", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //echo "Connected successfully"; 
-}
-catch(PDOException $e)
-{
-    echo "Connection failed: " . $e->getMessage();
+    public function connect( )
+    {
+        try 
+        {
+            return new PDO(
+                'sqlite:./database.sqlite',
+                null,
+                null,
+                array(PDO::ATTR_PERSISTENT => true)
+            );
+        }
+        catch(PDOException $e)
+        {
+            return $e->getMessage();
+        }
+    }
+
 }
 
-$conn = null;
 ?>
