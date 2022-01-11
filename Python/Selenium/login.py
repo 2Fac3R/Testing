@@ -12,7 +12,7 @@ task_title_list = data_driver.find_elements_by_class_name("task-title div")
 
 # Login Data
 myemail = "genr1818@gmail.com"
-mypwd = "pythonselenium"
+mypwd = ""
 
 driver = webdriver.Chrome()
 
