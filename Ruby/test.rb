@@ -1,30 +1,14 @@
-role = :admin
-fruits = ['apple', 'banana', 'watermelon']
-x = 1
+require_relative 'Calculator'
 
-# if role == :admin
-#   puts "Admin"
-# elsif role == :mod
-#   puts "Moderator"
-# else
-#   puts "Default"
-# end
+calc = Calculator.new
+test_sums = {
+    [1, 2] => 3,
+    [5, 6] => 11,
+    [100, 1] => 101
+}
 
-# while x < 5 do
-#   puts "#{x}"
-#   x += 1
-# end
-
-# loop do
-#   puts "#{x}"
-#   break if x < 5
-#   x += 1
-# end
-
-# for x in 1..4 do
-#   puts "#{x}"
-# end
-
-fruits.each { |fruit| puts "#{fruit}" }
-
-4.times { |x| puts "Hi #{x}" }
+test_sums.each do |input, expected_result|
+    if !(calc.sum(input[0], input[1]) == expected_result)
+        raise "Test failed for input: #{input}, expected result: #{expected_result}."
+    end
+end
