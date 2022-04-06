@@ -1,0 +1,11 @@
+{
+  "name": "learning-nodejs",
+  "version": "1.0.0",
+  "description": "Learning NodeJs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gustavo Navarro <genr1818@gmail.com>",
+  "license": "ISC"
+}
