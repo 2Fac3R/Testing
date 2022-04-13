@@ -1,10 +1,14 @@
 <?php
 // Example
-require_once "connection.php";
+require_once 'connection.php';
 
-$dbname = "MyGuests";
+$dbname = 'MyGuests';
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO(
+        "mysql:host=$servername;dbname=$dbname",
+        $username,
+        $password
+    );
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -16,29 +20,27 @@ try {
     $stmt->bindParam(':email', $email);
 
     // insert a row
-    $firstname = "John";
-    $lastname = "Doe";
-    $email = "john@example.com";
+    $firstname = 'John';
+    $lastname = 'Doe';
+    $email = 'john@example.com';
     $stmt->execute();
 
     // insert another row
-    $firstname = "Mary";
-    $lastname = "Moe";
-    $email = "mary@example.com";
+    $firstname = 'Mary';
+    $lastname = 'Moe';
+    $email = 'mary@example.com';
     $stmt->execute();
 
     // insert another row
-    $firstname = "Julie";
-    $lastname = "Dooley";
-    $email = "julie@example.com";
+    $firstname = 'Julie';
+    $lastname = 'Dooley';
+    $email = 'julie@example.com';
     $stmt->execute();
 
-    echo "New records created successfully";
-    }
-catch(PDOException $e)
-    {
-    echo "Error: " . $e->getMessage();
-    }
+    echo 'New records created successfully';
+} catch (PDOException $e) {
+    echo 'Error: ' . $e->getMessage();
+}
 $conn = null;
 
 ?>

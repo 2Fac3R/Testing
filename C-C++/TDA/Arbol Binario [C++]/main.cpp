@@ -11,8 +11,8 @@ class Nodo
 {
 private:
     Pasajero *dato;
-    Nodo *izq; //enlace izquierdo
-    Nodo *der; //enlace derecho
+    Nodo *izq; // enlace izquierdo
+    Nodo *der; // enlace derecho
 
 public:
     Nodo(Pasajero *info); // CONSTRUCTOR

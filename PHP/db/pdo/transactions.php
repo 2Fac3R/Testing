@@ -6,7 +6,7 @@ require_once 'connection.php';
 $dbh->beginTransaction();
 
 /* Change the database schema */
-$sth = $dbh->exec("DROP TABLE fruit");
+$sth = $dbh->exec('DROP TABLE fruit');
 
 /* Commit the changes */
 $dbh->commit();
@@ -19,7 +19,7 @@ $dbh->commit();
 $dbh->beginTransaction();
 
 /* Change the database schema and data */
-$sth = $dbh->exec("DROP TABLE fruit");
+$sth = $dbh->exec('DROP TABLE fruit');
 $sth = $dbh->exec("UPDATE dessert
     SET name = 'hamburger'");
 

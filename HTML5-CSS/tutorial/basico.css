@@ -1,83 +1,82 @@
 body {
-    /*background-image: url("url.ext");*/
-    background-color: white;
-    color: black;
+  /*background-image: url("url.ext");*/
+  background-color: white;
+  color: black;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 p {
-    background-color: orange;
-    font-family: verdana;
-    font-size: 20px;
-    font-style: oblique;
+  background-color: orange;
+  font-family: verdana;
+  font-size: 20px;
+  font-style: oblique;
 }
 
 h3,
 h5 {
-    border: 2px dashed violet;
-    text-transform: uppercase;
+  border: 2px dashed violet;
+  text-transform: uppercase;
 }
 
 h4,
 h6 {
-    border: 1px dotted tomato;
-    text-transform: capitalize;
-    text-shadow: 3px 1px red;
+  border: 1px dotted tomato;
+  text-transform: capitalize;
+  text-shadow: 3px 1px red;
 }
 
 /* link states*/
 
 a:link {
-    color: red;
+  color: red;
 }
 
 a:visited {
-    color: green;
+  color: green;
 }
 
 a:hover {
-    color: pink;
-    text-decoration: none;
+  color: pink;
+  text-decoration: none;
 }
 
 a:active {
-    color: blue;
-    text-decoration: underline;
+  color: blue;
+  text-decoration: underline;
 }
-
 
 /* ID (must be unique)*/
 
 #inline-example {
-    background-color: #80ffe5;
+  background-color: #80ffe5;
 }
 
 #inblock-example {
-    background-color: #00b33c;
+  background-color: #00b33c;
 }
-
 
 /* Class (Selects elements with specific class attribute)*/
 
-.class {}
+.class {
+}
 
 table,
 th,
 tr {
-    /*border: 1px solid red; */
-    border-collapse: collapse;
-    border-color: red;
-    border-style: solid;
-    border-left-color: blueviolet;
+  /*border: 1px solid red; */
+  border-collapse: collapse;
+  border-color: red;
+  border-style: solid;
+  border-left-color: blueviolet;
 }
 
 th {
-    background-color: bisque;
+  background-color: bisque;
 }
 
 td {
-    padding: 15px;
+  padding: 15px;
 }

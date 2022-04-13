@@ -1,7 +1,7 @@
 Vue.component('CoinDetail', {
   props: ['coin'],
 
-  data () {
+  data() {
     return {
       showPrices: false,
       value: 0
@@ -9,7 +9,7 @@ Vue.component('CoinDetail', {
   },
 
   methods: {
-    toggleShowPrices () {
+    toggleShowPrices() {
       this.showPrices = !this.showPrices
 
       this.$emit('change-color', this.showPrices ? 'FF96C8' : '3D3D3D')
@@ -17,11 +17,11 @@ Vue.component('CoinDetail', {
   },
 
   computed: {
-    title () {
+    title() {
       return `${this.coin.name} - ${this.coin.symbol}`
     },
 
-    convertedValue () {
+    convertedValue() {
       if (!this.value) {
         return 0
       }
@@ -30,11 +30,11 @@ Vue.component('CoinDetail', {
     }
   },
 
-  created () {
+  created() {
     console.log('Created CoinDetail...')
   },
 
-  mounted () {
+  mounted() {
     console.log('Mounted CoinDetail...')
   },
 
@@ -81,7 +81,7 @@ Vue.component('CoinDetail', {
 new Vue({
   el: '#app',
 
-  data () {
+  data() {
     return {
       btc: {
         name: 'Bitcoin',
@@ -104,16 +104,16 @@ new Vue({
     }
   },
 
-  created () {
+  created() {
     console.log('Created...')
   },
 
-  mounted () {
+  mounted() {
     console.log('Mounted...')
   },
 
   methods: {
-    updateColor (color) {
+    updateColor(color) {
       this.color = color || this.color
         .split('')
         .reverse()

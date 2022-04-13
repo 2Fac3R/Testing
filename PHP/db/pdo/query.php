@@ -1,8 +1,7 @@
 <?php
-require_once "connection.php";
+require_once 'connection.php';
 
 try {
-    
     $con = new Connection();
     $dbh = $con->connect();
     $sql = "
@@ -15,13 +14,11 @@ try {
         );
      ";
     // use exec() because no results are returned
-    echo $dbh->exec($sql) 
-        ? "Database created successfully" 
-        : print_r($dbh->errorInfo())
-    ;
-}
-catch(PDOException $e) {
-    echo $sql . "<br>" . $e->getMessage();
+    echo $dbh->exec($sql)
+        ? 'Database created successfully'
+        : print_r($dbh->errorInfo());
+} catch (PDOException $e) {
+    echo $sql . '<br>' . $e->getMessage();
 }
 
 $conn = null;

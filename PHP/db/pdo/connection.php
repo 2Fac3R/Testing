@@ -1,24 +1,17 @@
 <?php
 
-Class Connection
+class Connection
 {
-    public function connect( )
+    public function connect()
     {
-        try 
-        {
-            return new PDO(
-                'sqlite:./database.sqlite',
-                null,
-                null,
-                array(PDO::ATTR_PERSISTENT => true)
-            );
-        }
-        catch(PDOException $e)
-        {
+        try {
+            return new PDO('sqlite:./database.sqlite', null, null, [
+                PDO::ATTR_PERSISTENT => true,
+            ]);
+        } catch (PDOException $e) {
             return $e->getMessage();
         }
     }
-
 }
 
 ?>

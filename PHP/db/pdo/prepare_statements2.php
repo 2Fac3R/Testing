@@ -1,19 +1,22 @@
 <?php
-require_once "connection.php";
+require_once 'connection.php';
 
 try {
-    $dbname = "dvwa";
-    define("DB_USER_MAXLENGHT",15);
+    $dbname = 'dvwa';
+    define('DB_USER_MAXLENGHT', 15);
 
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO(
+        "mysql:host=$servername;dbname=$dbname",
+        $username,
+        $password
+    );
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     /* Execute a prepared statement by binding PHP variables */
     $user_id = 1;
     $user = 'admin';
-    $query =
-    "
+    $query = "
         SELECT *
           FROM users
           WHERE
@@ -29,9 +32,8 @@ try {
     $data = $sth->fetchAll();
 
     print_r($data);
-
-}catch(PDOException $e){
-    echo "Error: " . $e->getMessage();
+} catch (PDOException $e) {
+    echo 'Error: ' . $e->getMessage();
 }
 
 ?>
