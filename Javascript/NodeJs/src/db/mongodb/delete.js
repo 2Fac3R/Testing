@@ -1,11 +1,12 @@
 require('dotenv').config()
-const url = process.env.MONGO_URI;
+
 const MongoClient = require('mongodb').MongoClient;
+const url = process.env.MONGO_URI;
 
 MongoClient.connect(url, (err, db) => {
   if (err) throw err;
-  var dbo = db.db("mydb");
-  var myquery = { address: 'Mountain 21' };
+  let dbo = db.db("mydb");
+  let myquery = { address: 'Mountain 21' };
   dbo.collection("customers").deleteOne(myquery, (err, obj) => {
     if (err) throw err;
     console.log("1 document deleted");

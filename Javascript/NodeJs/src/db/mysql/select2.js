@@ -1,5 +1,6 @@
-const mysql = require('mysql');
 require('dotenv').config()
+
+const mysql = require('mysql');
 
 const con = mysql.createConnection({
   host: process.env.DB_HOST,
@@ -10,7 +11,9 @@ const con = mysql.createConnection({
 
 con.connect((err) => {
   if (err) throw err;
-  con.query("SELECT id, name FROM users", (err, result, fields) => {
+  let sql = "SELECT id, name FROM users";
+
+  con.query(sql, (err, result, fields) => {
     if (err) throw err;
     console.log(result);
     console.log(result[0].name);
