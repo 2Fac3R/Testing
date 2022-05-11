@@ -1,14 +1,17 @@
-require('dotenv').config()
+const client = require('./connection');
 
-const MongoClient = require('mongodb').MongoClient;
-const url = process.env.MONGO_URI;
-
-MongoClient.connect(url, (err, db) => {
-  if (err) throw err;
-  let dbo = db.db("mydb");
-  dbo.collection("customers").find({}).toArray((err, result) => {
-    if (err) throw err;
+async function run() {
+  try {
+    await client.connect();
+    const database = client.db("mydb");
+    const customers = database.collection("customers");
+    const result = await customers.find({}).toArray();
     console.log(result);
-    db.close();
-  });
-});
+  } catch (error) {
+    throw error;
+  } finally {
+    await client.close();
+  }
+}
+
+run();

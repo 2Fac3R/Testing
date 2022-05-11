@@ -1,5 +1,6 @@
 const express = require('express');
 
+// const ProductsService = require('../services/product.service');
 const ProductsService = require('../services/product.service');
 const validatorHandler = require('../middlewares/validator.handler');
 const {
@@ -12,6 +13,11 @@ const {
 
 const router = express.Router();
 const service = new ProductsService();
+
+router.get('/generate', async (req, res) => {
+  const products = await service.generate();
+  res.json(products);
+});
 
 router.get('/', async (req, res) => {
   const products = await service.find();
@@ -87,8 +93,5 @@ router.delete('/:id',
   }
 );
 
-router.get('/filter', (req, res) => {
-  res.send('Yo soy un filter');
-});
 
 module.exports = router;
