@@ -9,7 +9,6 @@ class ProductsService {
   constructor() {
     this.db = database;
     this.collection = this.db.collection("products");
-    // this.generate();
   }
 
   async generate() {
